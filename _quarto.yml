@@ -24,5 +24,6 @@ format:
     toc: true
 
 comments:
+  giscus:
     repo: manhnguy/Manhnd
 

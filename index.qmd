@@ -4,6 +4,7 @@ about:
   id: me
   template: broadside
   image: img/profile.png
+comments: false
 ---
 
 :::{#me}

@@ -1,0 +1,21 @@
+/*-- scss:defaults --*/
+
+$font-size-base:              1.05rem !default;
+$headings-font-weight:        700 !default;
+
+// Rounded buttons
+$enable-rounded:              true !default;
+$btn-border-radius:           10px !default;
+
+$link-decoration: none !important;
+
+/*-- scss:rules --*/
+.credit {
+  font-size: 80%;
+  text-align: right;
+}
+
+// Change color of package names on hover in Software
+.link-dark:hover {
+  color: #234ebf !important;
+}

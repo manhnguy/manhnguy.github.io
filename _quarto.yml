@@ -6,6 +6,7 @@ project:
   
 website:
   title: "Manh ND"
+  favicon: "img/profile.png"
   navbar:
     left:
       - href: index.qmd

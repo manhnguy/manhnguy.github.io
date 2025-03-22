@@ -1,0 +1,18 @@
+---
+title: "Material"
+listing: 
+  - id: epi
+    contents: epidemiology
+    fields: [image, title, description]
+    sort: "date desc"
+    type: grid
+format: 
+  html:
+    toc: true
+---
+
+## Epidemiolohy
+
+:::{#epi}
+:::
+

@@ -9,8 +9,10 @@ website:
   favicon: "img/profile.png"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      - text: Home
+        href: index.qmd
+      - text: Material
+        href: index.qmd
       - projects.qmd
     tools:
       - icon: github

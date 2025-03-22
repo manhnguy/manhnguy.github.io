@@ -1,0 +1,16 @@
+---
+title: "Fundamental Epidemiology Study Designs"
+description: "Description"
+date: 2024-05-02
+author:
+  - name: Manh Nguyen
+    url: https://manhnguy.github.io/
+    # orcid: 0000-0001-6772-9291
+# image: preview.png
+draft: false
+execute:
+  eval: false
+---
+
+[{{< fa link >}} Course homepage](https://github.com/manhnguy/fund_epi){.btn .btn-outline-secondary role="button"}
+

@@ -12,5 +12,4 @@ execute:
   eval: false
 ---
 
-[{{< fa link >}} Course homepage](https://github.com/manhnguy/fund_epi){.btn .btn-outline-secondary role="button"}
-
+[{{< fa link >}} Course homepage](https://manhnguy.github.io/fund_epi/){.btn .btn-outline-secondary role="button"}

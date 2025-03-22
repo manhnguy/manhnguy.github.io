@@ -12,7 +12,7 @@ website:
       - text: Home
         href: index.qmd
       - text: Material
-        href: index.qmd
+        href: material/index.qmd
       - projects.qmd
     tools:
       - icon: github

@@ -2,7 +2,7 @@
 title: "Material"
 listing: 
   - id: epi
-    contents: epidemiology
+    contents: epi
     fields: [image, title, description]
     sort: "date desc"
     type: grid
@@ -11,7 +11,7 @@ format:
     toc: true
 ---
 
-## Epidemiolohy
+## Epidemiology
 
 :::{#epi}
 :::

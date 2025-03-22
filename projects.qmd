@@ -3,8 +3,10 @@ title: "Projects"
 comments: false
 ---
 
-## Project 1
+## [Denge Advanced Readiness Tools](https://www.dartdengue.org/)
+Research Assistant and Project Manager
 
-## Project 2
+## Advance Warning and Response Exemplars
+Research Assistant
 
 ## Project 3

@@ -1,8 +1,8 @@
 ---
-title: "Manh Nguyen Duc"
+title: "About Me"
 about:
   id: me
-  template: trestles
+  template: broadside
   image: img/profile.png
   image-shape: round
 comments: false
@@ -15,6 +15,12 @@ comments: false
 ## Education
 
 ## Experience
+
+
+
+
+
+
 
 
 :::

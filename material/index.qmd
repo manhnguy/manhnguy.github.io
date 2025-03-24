@@ -9,6 +9,7 @@ listing:
 format: 
   html:
     toc: true
+comments: false
 ---
 
 ## Epidemiology

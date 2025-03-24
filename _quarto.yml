@@ -8,6 +8,7 @@ website:
   title: "Manh ND"
   favicon: "img/profile.png"
   navbar:
+    background: primary
     left:
       - text: Home
         href: index.qmd

@@ -11,20 +11,10 @@ comments: false
 :::{#me}
 
 ## Goals
-I am an epidemiologist and researcher working on infectious disease dynamics, mathematical modelling, and public health readiness.My work focuses on addressing critical public health challenges through epidemiological data analysis, mathematical modeling, and user-friendly surveillance tools.
+I am an epidemiologist and researcher working on infectious disease dynamics, mathematical modelling, and public health readiness. My work focuses on addressing critical public health challenges through epidemiological data analysis, mathematical modeling, and user-friendly surveillance tools.
 
 ## Education
 - **MSc in Epidemiology** — London School of Hygiene & Tropical Medicine (2024–2026)
-- **B.Eng.** — University of Transport and Communications, Hanoi (2011–2016)
-
-## Experience
-- **Research Assistant & Project Manager** — OUCRU Vietnam (2023–Present)  
-  *Early warning systems, dengue surveillance pipelines (DART), and participatory outbreak modelling.*
-- **Research Assistant (Biostatistics)** — OUCRU Vietnam (2022)  
-  *COVID-19 transmission dynamics and interactive R Shiny dashboards.*
-- **Research Assistant (Modelling)** — OUCRU Vietnam (2021)  
-  *Epidemiological data pipelines and statistical modeling.*
+- **B.Eng.** — Hanoi University of Transport and Communications (2011–2016)
 
 :::
-
-

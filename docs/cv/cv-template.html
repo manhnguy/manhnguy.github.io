@@ -101,7 +101,7 @@
     padding: 4.5px 0;
     vertical-align: baseline;
     text-align: left;
-    font-size: 12pt;       /* Explicit 12pt for all regular table content */
+    font-size: 12pt;       /* Strictly 12pt body text */
   }
 
   .cv-table .c-when-narrow {
@@ -140,14 +140,14 @@
     font-style: italic;
     font-weight: 600;
     color: var(--accent);
-    font-size: 12pt;
+    font-size: 12pt;       /* Strictly 12pt body text */
     border-bottom: 0.5px solid var(--rule);
   }
 
   /* Project sub-items inside experience */
   .proj-head {
     margin: 4px 0 1px;
-    font-size: 12pt;
+    font-size: 12pt;       /* Strictly 12pt body text */
   }
   .proj-title {
     font-weight: 600;
@@ -156,7 +156,7 @@
   .proj-sup {
     font-style: italic;
     color: var(--muted);
-    font-size: 12pt;
+    font-size: 12pt;       /* Strictly 12pt body text */
     margin-bottom: 2px;
   }
 
@@ -166,7 +166,7 @@
     padding-left: 1.35em;
   }
   .cv-pubs li {
-    font-size: 12pt;       /* Explicit 12pt for duties */
+    font-size: 12pt;       /* Strictly 12pt body text */
     line-height: 1.45;
     margin-bottom: 3.5px;
     color: #2e2a27;
@@ -178,7 +178,7 @@
   .cv-lead {
     font-style: italic;
     color: var(--muted);
-    font-size: 11pt;
+    font-size: 12pt;       /* Strictly 12pt body text */
     margin: 2px 0 10px 0;
   }
 
@@ -187,9 +187,9 @@
     padding-left: 1.5em;
   }
   .cv-pub-list li {
-    font-size: 12pt;       /* Explicit 12pt for publications */
+    font-size: 12pt;       /* Strictly 12pt body text */
     line-height: 1.50;
-    padding-bottom: 14px;  /* Clean separation between papers */
+    padding-bottom: 12px;  /* Clean separation between papers */
     margin-bottom: 0;
     color: var(--ink);
   }
@@ -239,7 +239,7 @@
     html, body {
       background: #ffffff !important;
       font-size: 12pt !important;
-      line-height: 1.42 !important;
+      line-height: 1.40 !important;
     }
     .cv {
       box-shadow: none !important;
@@ -247,10 +247,13 @@
       width: 100% !important;
       max-width: 100% !important;
     }
+    .cv-sec {
+      margin-top: 14px !important;
+    }
     .cv-h {
       break-after: avoid !important;
       page-break-after: avoid !important;
-      margin: 15px 0 6px !important;
+      margin: 10px 0 4px !important;
     }
     .cv-table {
       width: 100% !important;
@@ -258,12 +261,12 @@
       table-layout: fixed !important;
     }
     .cv-table tr {
-      break-inside: auto !important;
-      page-break-inside: auto !important;
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
     }
     .cv-table td {
-      font-size: 12pt !important;
-      padding: 3px 0 !important;
+      font-size: 12pt !important;  /* Strictly 12pt in PDF */
+      padding: 2.5px 0 !important;
     }
     .cv-table .c-when-narrow {
       font-size: 12pt !important;
@@ -276,27 +279,28 @@
       padding-right: 24px !important;
     }
     .cv-pubs li {
-      font-size: 12pt !important;
-      line-height: 1.40 !important;
+      font-size: 12pt !important;  /* Strictly 12pt in PDF */
+      line-height: 1.38 !important;
       break-inside: avoid !important;
       page-break-inside: avoid !important;
-      margin-bottom: 3px !important;
+      margin-bottom: 2.5px !important;
     }
     .cv-subgroup td {
-      font-size: 12pt !important;
+      font-size: 12pt !important;  /* Strictly 12pt in PDF */
+      padding: 8px 0 2px !important;
     }
     .cv-lead {
-      font-size: 11pt !important;
-      margin: 2px 0 8px 0 !important;
+      font-size: 12pt !important;  /* Strictly 12pt in PDF */
+      margin: 2px 0 6px 0 !important;
     }
     .cv-pub-list {
-      margin: 4px 0 10px 0 !important;
+      margin: 4px 0 8px 0 !important;
       padding-left: 1.5em !important;
     }
     .cv-pub-list li {
-      font-size: 12pt !important;
-      line-height: 1.45 !important;
-      padding-bottom: 12px !important; /* Dedicated spacing between papers in PDF */
+      font-size: 12pt !important;  /* Strictly 12pt in PDF */
+      line-height: 1.42 !important;
+      padding-bottom: 10px !important;
       margin-bottom: 0 !important;
       break-inside: avoid !important;
       page-break-inside: avoid !important;
@@ -306,17 +310,17 @@
 
     @page {
       size: A4 portrait;
-      margin-top: 13mm;
-      margin-bottom: 16mm;
-      margin-left: 15mm;
-      margin-right: 15mm;
+      margin-top: 11mm;
+      margin-bottom: 16mm;  /* Prevents content crashing into the running footer */
+      margin-left: 14mm;
+      margin-right: 14mm;
     }
   }
 </style>
 </head>
 <body>
   <nav class="cv-bar" aria-label="CV actions">
-    <a href="cv.pdf" download="Manh_ND_CV.pdf">Download PDF</a>
+    <a href="/cv/cv.pdf" download="Manh_ND_CV.pdf">Download PDF</a>
     <button type="button" onclick="window.print()">Print</button>
   </nav>
   <article class="cv">

@@ -4,7 +4,7 @@ about:
   id: me
   template: trestles
   image-shape: round
-  image: img/profile.png
+  image: img/profile.jpg
 comments: false
 ---
 

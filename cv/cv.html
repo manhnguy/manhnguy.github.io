@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manh Nguyen Duc - Curriculum Vitae</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #ffffff;
+    --ink: #1f1c1a;
+    --muted: #5a544e;
+    --rule: #d5cfc9;
+    --accent: #002147;      /* Oxford Navy */
+    --year: #4a6894;        /* Slate Blue */
+    --link: #2b558c;
+    --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #ecebe5;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 12pt;        /* Strictly 12pt base */
+    line-height: 1.48;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    font-feature-settings: "onum" 1, "pnum" 1, "liga" 1, "kern" 1;
+    padding: 34px 18px 70px;
+  }
+
+  .cv {
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+    background: var(--paper);
+    box-shadow: 0 16px 45px rgba(35, 30, 20, 0.14);
+    padding: 46px 54px;
+  }
+
+  /* ---------- Header ---------- */
+  .cv-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .cv-name {
+    font-size: 34pt;
+    font-weight: 500;
+    line-height: 1.05;
+    margin: 0;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .cv-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    font-size: 11pt;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+  .cv-contact li { display: block; }
+  .cv-contact a { color: var(--muted); text-decoration: none; }
+  .cv-contact a:hover { color: var(--link); text-decoration: underline; }
+  
+  .cv-rule {
+    border: 0;
+    border-top: 1.5px solid var(--accent);
+    margin: 16px 0 22px;
+  }
+
+  /* ---------- Sections ---------- */
+  .cv-sec { margin-top: 22px; }
+  .cv-h {
+    font-family: var(--serif);
+    font-size: 11pt;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+    padding-bottom: 3px;
+    border-bottom: 0.75px solid var(--rule);
+    text-align: left;
+  }
+
+  /* Fixed layout forces width values to hold without collapsing */
+  .cv-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  .cv-table td {
+    padding: 4.5px 0;
+    vertical-align: baseline;
+    text-align: left;
+    font-size: 12pt;       /* Explicit 12pt for all regular table content */
+  }
+
+  .cv-table .c-when-narrow {
+    width: 104px;
+    color: var(--year);
+    font-size: 12pt;
+    white-space: nowrap;
+    padding-right: 20px;
+  }
+
+  .cv-table .c-when-wide {
+    width: 158px;
+    color: var(--year);
+    font-size: 12pt;
+    white-space: nowrap;
+    padding-right: 24px;
+  }
+
+  .cv-table .t {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .cv-table .cv-meta {
+    color: var(--muted);
+  }
+  .cv-table a {
+    color: var(--link);
+    text-decoration: none;
+  }
+  .cv-table a:hover {
+    text-decoration: underline;
+  }
+
+  .cv-subgroup td {
+    padding: 12px 0 4px !important;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 12pt;
+    border-bottom: 0.5px solid var(--rule);
+  }
+
+  /* Project sub-items inside experience */
+  .proj-head {
+    margin: 4px 0 1px;
+    font-size: 12pt;
+  }
+  .proj-title {
+    font-weight: 600;
+    color: #2b2724;
+  }
+  .proj-sup {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 12pt;
+    margin-bottom: 2px;
+  }
+
+  /* Duties & general bullet lists */
+  .cv-pubs {
+    margin: 3px 0 6px;
+    padding-left: 1.35em;
+  }
+  .cv-pubs li {
+    font-size: 12pt;       /* Explicit 12pt for duties */
+    line-height: 1.45;
+    margin-bottom: 3.5px;
+    color: #2e2a27;
+  }
+  .cv-pubs b { font-weight: 600; color: var(--ink); }
+  .cv-pubs i { font-style: italic; }
+
+  /* Publication section styling */
+  .cv-lead {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 11pt;
+    margin: 2px 0 10px 0;
+  }
+
+  .cv-pub-list {
+    margin: 6px 0 12px 0;
+    padding-left: 1.5em;
+  }
+  .cv-pub-list li {
+    font-size: 12pt;       /* Explicit 12pt for publications */
+    line-height: 1.50;
+    padding-bottom: 14px;  /* Clean separation between papers */
+    margin-bottom: 0;
+    color: var(--ink);
+  }
+  .cv-pub-list li::marker {
+    color: var(--year);
+    font-weight: 600;
+  }
+  .cv-pub-list b { font-weight: 600; color: var(--ink); }
+  .cv-pub-list i { font-style: italic; }
+  .cv-pub-list a { color: var(--link); text-decoration: none; }
+  .cv-pub-list a:hover { text-decoration: underline; }
+
+  /* Running HTML footer (hidden in print) */
+  .cv-foot {
+    margin-top: 26px;
+    padding-top: 8px;
+    border-top: 0.75px solid var(--rule);
+    font-size: 10pt;
+    font-style: italic;
+    color: var(--muted);
+  }
+  .cv-foot td { padding: 0; }
+  .cv-foot .r { text-align: right; font-style: normal; }
+
+  /* Screen Action Bar */
+  .cv-bar {
+    max-width: 820px;
+    margin: 0 auto 10px;
+    text-align: right;
+    font-size: 10.5pt;
+  }
+  .cv-bar a, .cv-bar button {
+    color: var(--link);
+    background: none;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 6px 4px;
+    margin-left: 14px;
+  }
+  .cv-bar a:hover, .cv-bar button:hover { text-decoration: underline; }
+
+  /* ---------- Print / PDF Rules ---------- */
+  @media print {
+    .cv-bar { display: none !important; }
+    html, body {
+      background: #ffffff !important;
+      font-size: 12pt !important;
+      line-height: 1.42 !important;
+    }
+    .cv {
+      box-shadow: none !important;
+      padding: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .cv-h {
+      break-after: avoid !important;
+      page-break-after: avoid !important;
+      margin: 15px 0 6px !important;
+    }
+    .cv-table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+    }
+    .cv-table tr {
+      break-inside: auto !important;
+      page-break-inside: auto !important;
+    }
+    .cv-table td {
+      font-size: 12pt !important;
+      padding: 3px 0 !important;
+    }
+    .cv-table .c-when-narrow {
+      font-size: 12pt !important;
+      width: 104px !important;
+      padding-right: 20px !important;
+    }
+    .cv-table .c-when-wide {
+      font-size: 12pt !important;
+      width: 158px !important;
+      padding-right: 24px !important;
+    }
+    .cv-pubs li {
+      font-size: 12pt !important;
+      line-height: 1.40 !important;
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+      margin-bottom: 3px !important;
+    }
+    .cv-subgroup td {
+      font-size: 12pt !important;
+    }
+    .cv-lead {
+      font-size: 11pt !important;
+      margin: 2px 0 8px 0 !important;
+    }
+    .cv-pub-list {
+      margin: 4px 0 10px 0 !important;
+      padding-left: 1.5em !important;
+    }
+    .cv-pub-list li {
+      font-size: 12pt !important;
+      line-height: 1.45 !important;
+      padding-bottom: 12px !important; /* Dedicated spacing between papers in PDF */
+      margin-bottom: 0 !important;
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+    }
+    .cv-table a, .cv-pubs a, .cv-pub-list a { text-decoration: underline; }
+    .cv-foot { display: none !important; }
+
+    @page {
+      size: A4 portrait;
+      margin-top: 13mm;
+      margin-bottom: 16mm;
+      margin-left: 15mm;
+      margin-right: 15mm;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav class="cv-bar" aria-label="CV actions">
+    <a href="cv.pdf" download="Manh_ND_CV.pdf">Download PDF</a>
+    <button type="button" onclick="window.print()">Print</button>
+  </nav>
+  <article class="cv">
+    <header class="cv-head">
+      <div class="cv-id">
+        <h1 class="cv-name">Manh Nguyen Duc</h1>
+      </div>
+      <ul class="cv-contact">
+        <li><a href="mailto:manh.nt668@gmail.com">manh.nt668@gmail.com</a></li>
+        <li><a href="https://manhnguy.github.io">Website</a></li>
+        <li><a href="https://www.linkedin.com/in/manh-nguyen-duc-460362257/">LinkedIn</a></li>
+      </ul>
+    </header>
+
+    <div class="cv-rule"></div>
+
+    <section class="cv-sec">
+  <h2 class="cv-h">Education</h2>
+  <table class="cv-table"><tbody>
+<tr><td class="c-when-narrow">2024 – 2026</td><td><span class="t">MSc.</span>, London School of Hygene and Tropical Medicine, United Kingdom</td></tr>
+<tr><td class="c-when-narrow">2011 – 2016</td><td><span class="t">B.Eng.</span>, University of Transport and Communication, Ha Noi, Vietnam<br><span class="cv-meta">GPA: 8.19/10 (3.43/4)</span></td></tr>
+</tbody></table>
+</section>
+
+<section class="cv-sec">
+  <h2 class="cv-h">Awards</h2>
+  <table class="cv-table"><tbody>
+<tr><td class="c-when-narrow">2016</td><td><span class="t">Award for student who has achieved very good graduation results.</span> <span class="cv-meta">Hanoi University of Transport and Communications.</span></td></tr>
+<tr><td class="c-when-narrow">2015</td><td><span class="t">Annual award for student who has achieved very good results of the year.</span> <span class="cv-meta">Hanoi University of Transport and Communications.</span></td></tr>
+<tr><td class="c-when-narrow">2015</td><td><span class="t">Third prize for student scientific research. Topic: Applying SHIOMI method to organize separate lanes for motorbikes on 5 pilot routes in Hanoi.</span> <span class="cv-meta">Hanoi University of Transport and Communications.</span></td></tr>
+<tr><td class="c-when-narrow">2014</td><td><span class="t">Third prize for student scientific research. Topic: Optimal design of reinforced concrete beams according to standard 22TCN 272-05.</span> <span class="cv-meta">Hanoi University of Transport and Communications.</span></td></tr>
+</tbody></table>
+</section>
+
+<section class="cv-sec">
+  <h2 class="cv-h">Experience</h2>
+  <table class="cv-table"><tbody>
+<tr><td class="c-when-wide">Jan 2023 – Present</td><td style="padding-bottom: 5px;"><div style="margin-bottom: 2px;"><span class="t">Research Assistant and Project Manager</span>, Mathematical Modelling Group, Oxford University Clinical Research Unit, Vietnam</div><div class="proj-head"><span class="proj-title">Project: Advance Warning and Response Exemplars</span></div><div class="proj-sup">Supervisor: Assoc. Prof. Jennifer IloVan Nuil</div><ul class="cv-pubs"><li>Facilitate and conduct in-depth interviews with policymakers related to climate sensitive diseases early warning systems in Vietnam</li><li>Analyze collected qualitative data, contribute to writing project report and manuscript</li></ul></td></tr>
+<tr><td class="c-when-wide"></td><td style="padding-bottom: 5px;"><div class="proj-head"><span class="proj-title">Project: Dengue Advanced Readiness Tools (DART)</span></div><div class="proj-sup">Supervisor: Assoc. Prof. Marc Choisy</div><ul class="cv-pubs"><li>Clean, correct where needed and visualize data related to dengue collected from Ho Chi Minh Center for Disease Control</li><li>Manage the project: Prepare collaboration documents, organize meeting and travel for DART members</li></ul></td></tr>
+<tr><td class="c-when-wide"></td><td style="padding-bottom: 5px;"><div class="proj-head"><span class="proj-title">Project: Building citizen science intelligence for pandemic preparedness and response – Pilot implementation in collaboration with Brazil and Kenya</span></div><div class="proj-sup">Supervisor: Assoc. Prof. Marc Choisy</div><ul class="cv-pubs"><li>Co-design and facilitate a series of workshops using Participatory Modelling method to produce a contextual Actors-Resources-Dynamics-Interactions model together with a group of approximately 40 participants comprising citizens, researchers, healthcare workers and policy makers</li><li>Co-design a serious Role-playing game and an Agent-based model using Companion Modelling approach</li><li>Conduct and publish a statistical analysis using ordinary logistic regression on data collected from 9 countries</li></ul></td></tr>
+<tr><td class="c-when-wide">Jan 2022 – Dec 2022</td><td style="padding-bottom: 5px;"><div style="margin-bottom: 2px;"><span class="t">Research Assistant</span>, Biostatistics Group, Oxford University Clinical Research Unit, Vietnam</div><div class="proj-head"><span class="proj-title">Project: Using contact-tracing data from Viet Nam to estimate the distributions of latency and incubation time of SARS-CoV-2 infections</span></div><div class="proj-sup">Supervisor: Assoc. Prof. Marc Choisy and Dr. Le Hoang Thanh Nhat</div><ul class="cv-pubs"><li>Extract information from contact tracing case reports. Perform curation and cleaning of the contact tracing data</li><li>Evaluate, discuss and modify the questionnaires that Vietnam National Institute of Hygiene and Epidemiology / Ho Chi Minh Center for Disease Control used for contact tracing during the COVID-19 pandemic. The modified questionnaires can be used for future infectious disease outbreaks to obtain timely and accurate information on the exposure window based on the contact network, with a minimal impact on individual privacy. Write a prototype app, using the KoboToolbox framework, for data entry and automated data checking</li><li>Use R, R Shiny to visualize the transmission network in an interactive way</li></ul></td></tr>
+<tr><td class="c-when-wide">Jul 2021 – Dec 2021</td><td style="padding-bottom: 5px;"><div style="margin-bottom: 2px;"><span class="t">Research Assistant</span>, Mathematical Modelling Group, Oxford University Clinical Research Unit, Vietnam</div><div class="proj-head"><span class="proj-title">Project: Modelling COVID-19 in Vietnam</span></div><div class="proj-sup">Supervisor: Assoc. Prof. Marc Choisy</div><ul class="cv-pubs"><li>Search in online newspapers, government websites and articles to find information on COVID-19 Cases in Vietnam between Jan 2020 and Mar 2021</li><li>Using R to compare the information above with a COVID-19 research database and correct where needed</li><li>Self-study of statistics and modelling</li></ul></td></tr>
+<tr><td class="c-when-wide">Apr 2020 – Jul 2021</td><td style="padding-bottom: 5px;"><div style="margin-bottom: 2px;"><span class="t">Freelancer – Career Break</span>, Ho Chi Minh City, Vietnam</div><ul class="cv-pubs"><li>Translate between Vietnamese and English in the functional foods field</li><li>Create website content (modify from template)</li><li>Self-study of R, R Studio and R Shiny</li></ul></td></tr>
+<tr><td class="c-when-wide">Jul 2017 – Mar 2020</td><td style="padding-bottom: 5px;"><div style="margin-bottom: 2px;"><span class="t">Supervisor</span>, Hideout hostel Saigon, Vietnam</div><ul class="cv-pubs"><li>Supervise all activities and staff (15-20 persons)</li><li>Recruite new staff members</li><li>Sell accommodation, tours and other services, mostly to guests from abroad</li><li>Solve problems with customers</li></ul></td></tr>
+<tr><td class="c-when-wide">Mar 2016 – Mar 2017</td><td style="padding-bottom: 5px;"><div style="margin-bottom: 2px;"><span class="t">Quality Controlling Engineer</span>, Road Construction Phuc Hung Co.,Ltd, Vietnam</div><ul class="cv-pubs"><li>Controlling quality and quantity of construction work</li><li>Supervising machine drivers and labourers</li></ul></td></tr>
+</tbody></table>
+</section>
+
+<section class="cv-sec">
+  <h2 class="cv-h">Conferences & Presentations</h2>
+  <table class="cv-table"><tbody>
+<tr class="cv-subgroup"><td class="c-when-narrow"></td><td>Oral presentations</td></tr>
+<tr><td class="c-when-narrow">2025</td><td style="padding-bottom: 5px;"><i>Barriers and facilitators to effective advanced warning and response systems for climate-sensitive infectious diseases in Vietnam</i>. Oxford Tropical Network Meeting, <span class="cv-meta">Mombasa, Kenya</span>.</td></tr>
+<tr><td class="c-when-narrow">2024</td><td style="padding-bottom: 5px;"><i>Building Citizen Science Intelligence for Pandemic Preparedness and Response: Pilot Implementation</i>. The Infectious Disease Modelling Conference, <span class="cv-meta">Bangkok, Thailand</span>.</td></tr>
+<tr class="cv-subgroup"><td class="c-when-narrow"></td><td>Workshop Demonstration</td></tr>
+<tr><td class="c-when-narrow">2023</td><td style="padding-bottom: 5px;">Chieu Hoang Tran, <b>Duc Manh Nguyen</b>, Gabriel Cardozo Muller, Joel Mburu Kuria et al.. <i>The Citizen Outbreak Responder: a serious game for the management of an infectious disease outbreak</i>. International Simulation and Gaming Conference, <span class="cv-meta">La Rochelle, France</span>.</td></tr>
+</tbody></table>
+</section>
+
+<section class="cv-sec">
+  <h2 class="cv-h">Other Activities</h2>
+  <table class="cv-table"><tbody>
+<tr><td class="c-when-narrow">2025</td><td style="padding-bottom: 5px;"><span class="t">Teaching Assistant</span> &mdash; <a href="https://oucru-modelling.github.io/R-training-2025/" target="_blank">R training course</a>, <span class="cv-meta">Biostatistics and Mathematical Modelling Group, OUCRU, HCMC, Vietnam</span></td></tr>
+<tr><td class="c-when-narrow">2024</td><td style="padding-bottom: 5px;"><span class="t">Co-organizer &amp; Facilitator</span> &mdash; <a href="https://midsea.network/" target="_blank">MIDSEA Summer School</a>, <span class="cv-meta">Quy Nhon, Vietnam</span></td></tr>
+</tbody></table>
+</section>
+
+<section class="cv-sec">
+  <h2 class="cv-h">Publications</h2>
+  <p class="cv-lead">2 peer-reviewed journal articles.</p>
+<ol class="cv-pub-list">
+<li style="padding-bottom: 12px; margin-bottom: 4px;">Arntzen VH, <b>Nguyen Duc M</b>, Fiocco M, Truong Thi Thanh L, Nguyen Hoai Thao T, Mai Thanh B, Nguyen TA, Le Thanh Hoang N, Choisy M, Phung Khanh L, Le Hong N, Geskus RB. The latency time of SARS-CoV- 2 Delta variant in infection- and vaccine-naive individuals from Vietnam. <i>BMC Infect Dis</i>. 2025;25(1):515. <a href="https://doi.org/10.1186/s12879-025-10898-3" target="_blank">[DOI]</a></li>
+<li style="padding-bottom: 12px; margin-bottom: 4px;">Tan YR, <b>Nguyen MD</b>, Mubaira CA, Kajungu D, Kumar D, Canlas FC, Sunaryoko FY, Maharjan GR, Khosa H, Hauter I, Thiga J, Anowar MM, Okwen P, Kutadza T, Chikanya W, Choisy M, Yap P. Building citizen science intelligence for outbreak preparedness and response: a mixed-method study in nine countries to assess knowledge, readiness and feasibility. <i>BMJ Glob Health</i>. 2024;9(3):e014490. <a href="https://doi.org/10.1136/bmjgh-2023-014490" target="_blank">[DOI]</a></li>
+</ol>
+</section>
+
+    <table class="cv-foot" style="width:100%"><tbody><tr>
+      <td>Manh Nguyen Duc, curriculum vitae</td>
+      <td class="r">Updated September 2026</td>
+    </tr></tbody></table>
+  </article>
+</body>
+</html>

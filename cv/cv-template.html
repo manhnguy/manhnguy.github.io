@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manh Nguyen Duc - Curriculum Vitae</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #ffffff;
+    --ink: #1f1c1a;
+    --muted: #5a544e;
+    --rule: #d5cfc9;
+    --accent: #002147;      /* Oxford Navy */
+    --year: #4a6894;        /* Slate Blue */
+    --link: #2b558c;
+    --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #ecebe5;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 12pt;        /* Strictly 12pt base */
+    line-height: 1.48;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    font-feature-settings: "onum" 1, "pnum" 1, "liga" 1, "kern" 1;
+    padding: 34px 18px 70px;
+  }
+
+  .cv {
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+    background: var(--paper);
+    box-shadow: 0 16px 45px rgba(35, 30, 20, 0.14);
+    padding: 46px 54px;
+  }
+
+  /* ---------- Header ---------- */
+  .cv-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .cv-name {
+    font-size: 34pt;
+    font-weight: 500;
+    line-height: 1.05;
+    margin: 0;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .cv-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    font-size: 11pt;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+  .cv-contact li { display: block; }
+  .cv-contact a { color: var(--muted); text-decoration: none; }
+  .cv-contact a:hover { color: var(--link); text-decoration: underline; }
+  
+  .cv-rule {
+    border: 0;
+    border-top: 1.5px solid var(--accent);
+    margin: 16px 0 22px;
+  }
+
+  /* ---------- Sections ---------- */
+  .cv-sec { margin-top: 22px; }
+  .cv-h {
+    font-family: var(--serif);
+    font-size: 11pt;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+    padding-bottom: 3px;
+    border-bottom: 0.75px solid var(--rule);
+    text-align: left;
+  }
+
+  /* Fixed layout forces width values to hold without collapsing */
+  .cv-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  .cv-table td {
+    padding: 4.5px 0;
+    vertical-align: baseline;
+    text-align: left;
+    font-size: 12pt;       /* Explicit 12pt for all regular table content */
+  }
+
+  .cv-table .c-when-narrow {
+    width: 104px;
+    color: var(--year);
+    font-size: 12pt;
+    white-space: nowrap;
+    padding-right: 20px;
+  }
+
+  .cv-table .c-when-wide {
+    width: 158px;
+    color: var(--year);
+    font-size: 12pt;
+    white-space: nowrap;
+    padding-right: 24px;
+  }
+
+  .cv-table .t {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .cv-table .cv-meta {
+    color: var(--muted);
+  }
+  .cv-table a {
+    color: var(--link);
+    text-decoration: none;
+  }
+  .cv-table a:hover {
+    text-decoration: underline;
+  }
+
+  .cv-subgroup td {
+    padding: 12px 0 4px !important;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 12pt;
+    border-bottom: 0.5px solid var(--rule);
+  }
+
+  /* Project sub-items inside experience */
+  .proj-head {
+    margin: 4px 0 1px;
+    font-size: 12pt;
+  }
+  .proj-title {
+    font-weight: 600;
+    color: #2b2724;
+  }
+  .proj-sup {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 12pt;
+    margin-bottom: 2px;
+  }
+
+  /* Duties & general bullet lists */
+  .cv-pubs {
+    margin: 3px 0 6px;
+    padding-left: 1.35em;
+  }
+  .cv-pubs li {
+    font-size: 12pt;       /* Explicit 12pt for duties */
+    line-height: 1.45;
+    margin-bottom: 3.5px;
+    color: #2e2a27;
+  }
+  .cv-pubs b { font-weight: 600; color: var(--ink); }
+  .cv-pubs i { font-style: italic; }
+
+  /* Publication section styling */
+  .cv-lead {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 11pt;
+    margin: 2px 0 10px 0;
+  }
+
+  .cv-pub-list {
+    margin: 6px 0 12px 0;
+    padding-left: 1.5em;
+  }
+  .cv-pub-list li {
+    font-size: 12pt;       /* Explicit 12pt for publications */
+    line-height: 1.50;
+    padding-bottom: 14px;  /* Clean separation between papers */
+    margin-bottom: 0;
+    color: var(--ink);
+  }
+  .cv-pub-list li::marker {
+    color: var(--year);
+    font-weight: 600;
+  }
+  .cv-pub-list b { font-weight: 600; color: var(--ink); }
+  .cv-pub-list i { font-style: italic; }
+  .cv-pub-list a { color: var(--link); text-decoration: none; }
+  .cv-pub-list a:hover { text-decoration: underline; }
+
+  /* Running HTML footer (hidden in print) */
+  .cv-foot {
+    margin-top: 26px;
+    padding-top: 8px;
+    border-top: 0.75px solid var(--rule);
+    font-size: 10pt;
+    font-style: italic;
+    color: var(--muted);
+  }
+  .cv-foot td { padding: 0; }
+  .cv-foot .r { text-align: right; font-style: normal; }
+
+  /* Screen Action Bar */
+  .cv-bar {
+    max-width: 820px;
+    margin: 0 auto 10px;
+    text-align: right;
+    font-size: 10.5pt;
+  }
+  .cv-bar a, .cv-bar button {
+    color: var(--link);
+    background: none;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 6px 4px;
+    margin-left: 14px;
+  }
+  .cv-bar a:hover, .cv-bar button:hover { text-decoration: underline; }
+
+  /* ---------- Print / PDF Rules ---------- */
+  @media print {
+    .cv-bar { display: none !important; }
+    html, body {
+      background: #ffffff !important;
+      font-size: 12pt !important;
+      line-height: 1.42 !important;
+    }
+    .cv {
+      box-shadow: none !important;
+      padding: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .cv-h {
+      break-after: avoid !important;
+      page-break-after: avoid !important;
+      margin: 15px 0 6px !important;
+    }
+    .cv-table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+    }
+    .cv-table tr {
+      break-inside: auto !important;
+      page-break-inside: auto !important;
+    }
+    .cv-table td {
+      font-size: 12pt !important;
+      padding: 3px 0 !important;
+    }
+    .cv-table .c-when-narrow {
+      font-size: 12pt !important;
+      width: 104px !important;
+      padding-right: 20px !important;
+    }
+    .cv-table .c-when-wide {
+      font-size: 12pt !important;
+      width: 158px !important;
+      padding-right: 24px !important;
+    }
+    .cv-pubs li {
+      font-size: 12pt !important;
+      line-height: 1.40 !important;
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+      margin-bottom: 3px !important;
+    }
+    .cv-subgroup td {
+      font-size: 12pt !important;
+    }
+    .cv-lead {
+      font-size: 11pt !important;
+      margin: 2px 0 8px 0 !important;
+    }
+    .cv-pub-list {
+      margin: 4px 0 10px 0 !important;
+      padding-left: 1.5em !important;
+    }
+    .cv-pub-list li {
+      font-size: 12pt !important;
+      line-height: 1.45 !important;
+      padding-bottom: 12px !important; /* Dedicated spacing between papers in PDF */
+      margin-bottom: 0 !important;
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+    }
+    .cv-table a, .cv-pubs a, .cv-pub-list a { text-decoration: underline; }
+    .cv-foot { display: none !important; }
+
+    @page {
+      size: A4 portrait;
+      margin-top: 13mm;
+      margin-bottom: 16mm;
+      margin-left: 15mm;
+      margin-right: 15mm;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav class="cv-bar" aria-label="CV actions">
+    <a href="cv.pdf" download="Manh_ND_CV.pdf">Download PDF</a>
+    <button type="button" onclick="window.print()">Print</button>
+  </nav>
+  <article class="cv">
+    <header class="cv-head">
+      <div class="cv-id">
+        <h1 class="cv-name">Manh Nguyen Duc</h1>
+      </div>
+      <ul class="cv-contact">
+        <li><a href="mailto:manh.nt668@gmail.com">manh.nt668@gmail.com</a></li>
+        <li><a href="https://manhnguy.github.io">Website</a></li>
+        <li><a href="https://www.linkedin.com/in/manh-nguyen-duc-460362257/">LinkedIn</a></li>
+      </ul>
+    </header>
+
+    <div class="cv-rule"></div>
+
+    {{SECTIONS}}
+
+    <table class="cv-foot" style="width:100%"><tbody><tr>
+      <td>Manh Nguyen Duc, curriculum vitae</td>
+      <td class="r">Updated {{UPDATED}}</td>
+    </tr></tbody></table>
+  </article>
+</body>
+</html>

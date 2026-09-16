@@ -2,7 +2,9 @@ project:
   type: website
   resources:
     - CNAME
+    - cv/*
   output-dir: docs
+    
   
 website:
   title: "Manh ND"
@@ -15,6 +17,8 @@ website:
       - text: Material
         href: material/index.qmd
       - projects.qmd
+      - href: cv/cv.html
+        text: CV
     right:
       - icon: github
         href: https://github.com/manhnguy

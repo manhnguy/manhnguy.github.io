@@ -1,40 +1,5 @@
 [
   {
-    "objectID": "projects.html#project-2",
-    "href": "projects.html#project-2",
-    "title": "Projects",
-    "section": "Project 2",
-    "text": "Project 2"
-  },
-  {
-    "objectID": "projects.html#project-3",
-    "href": "projects.html#project-3",
-    "title": "Projects",
-    "section": "Project 3",
-    "text": "Project 3"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About Me",
-    "section": "",
-    "text": "I am a person with a diverse background and a passion for learning and growth. Graduating from Hanoi University of Transport and Communication, I initially embarked on a career path in a different field before transitioning into roles that align more closely with my interests and skills. I had 2.5 years of experience working in a hostel. During that time, I honed my leadership abilities by effectively managing a team of 5-7 members. The COVID-19 outbreak provided me with an opportunity to reflect and pursue further education, leading me to self-learn R programming and basic statistics. This newfound expertise opened doors for me at Oxford University Clinical Research Unit (OUCRU) as a research assistant, where I specialized in data cleaning, visualization, and simple statistical analysis. Currently, I am based in the Mathematical Modelling group, where I work as a research assistant cum project coordinator for the Dengue Advanced Readiness Tools project."
-  },
-  {
-    "objectID": "material/index.html",
-    "href": "material/index.html",
-    "title": "Material",
-    "section": "",
-    "text": "Description\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "material/epi/index.html",
-    "href": "material/epi/index.html",
-    "title": "Fundamental Epidemiology Study Designs",
-    "section": "",
-    "text": "Course homepage"
-  },
-  {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
@@ -49,17 +14,24 @@
     "text": "Advance Warning and Response Exemplars\nResearch Assistant"
   },
   {
-    "objectID": "projects.html#denge-advanced-readiness-tools",
-    "href": "projects.html#denge-advanced-readiness-tools",
-    "title": "Projects",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Manh Nguyen Duc",
     "section": "",
-    "text": "Research Assistant and Project Manager"
+    "text": "I am an epidemiologist and researcher working on infectious disease dynamics, mathematical modelling, and public health readiness.My work focuses on addressing critical public health challenges through epidemiological data analysis, mathematical modeling, and user-friendly surveillance tools.\n\n\n\n\nMSc in Epidemiology — London School of Hygiene & Tropical Medicine (2024–2026)\nB.Eng. — University of Transport and Communications, Hanoi (2011–2016)\n\n\n\n\n\nResearch Assistant & Project Manager — OUCRU Vietnam (2023–Present)\nEarly warning systems, dengue surveillance pipelines (DART), and participatory outbreak modelling.\nResearch Assistant (Biostatistics) — OUCRU Vietnam (2022)\nCOVID-19 transmission dynamics and interactive R Shiny dashboards.\nResearch Assistant (Modelling) — OUCRU Vietnam (2021)\nEpidemiological data pipelines and statistical modeling."
   },
   {
-    "objectID": "material/index.html#epidemiology",
-    "href": "material/index.html#epidemiology",
+    "objectID": "material/index.html",
+    "href": "material/index.html",
     "title": "Material",
     "section": "",
     "text": "Description\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "material/epi/index.html",
+    "href": "material/epi/index.html",
+    "title": "Fundamental Epidemiology Study Designs",
+    "section": "",
+    "text": "Course homepage"
   }
 ]

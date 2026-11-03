@@ -241,6 +241,11 @@
       font-size: 12pt !important;
       line-height: 1.40 !important;
     }
+    /* Screen padding (incl. 70px at the bottom) must not apply to print,
+       otherwise it spills onto an extra blank last page. */
+    body {
+      padding: 0 !important;
+    }
     .cv {
       box-shadow: none !important;
       padding: 0 !important;
